@@ -10,8 +10,10 @@ A Backup for my personal linux config files, you can also use this files to make
 
 ## My Enviroment
 
-OS: Arch Linux x86\_64
+OS: Arch Linux
+
 Shell: zsh
+
 Termianl: deepin-terminal
 
 ### Dependencies
