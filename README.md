@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A Backup for my personal linux config files, you canl alse use this configs to make you linux pretty.
+A Backup for my personal linux config files, you can also use this files to make your linux desktop looks pretty.
 
 ## Preview
 
