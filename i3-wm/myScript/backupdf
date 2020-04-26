@@ -1,0 +1,19 @@
+#!/bin/zsh
+# backup configure file
+
+cfLoca="$HOME/.config"
+Loca="$HOME/Repo/remote/dotfiles"
+
+#backup i3-wm
+cp ${cfLoca}/polybar/my_config ${Loca}/polybar/
+
+#backup i3-wm
+cp ~/.myScript/* ${Loca}/i3-wm/myScript/
+cp ${cfLoca}/i3/config .
+
+#backup zsh
+cp ~/.zshrc ${Loca}/zsh/
+
+#backup vim
+
+cp ~/.vimrc ${Loca}/vim/
