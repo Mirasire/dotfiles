@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+
+rofi -modi "drun" -show drun -theme /usr/share/rofi/themes/Paper.rasi

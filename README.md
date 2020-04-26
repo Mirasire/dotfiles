@@ -16,20 +16,21 @@ Termianl: deepin-terminal
 
 ### Dependencies
 
-- i3-wm
+- [i3-wm](https://wiki.archlinux.org/index.php/I3)
     - i3-gaps
-    - xcompmgr | picom
+    - [xcompmgr](https://wiki.archlinux.org/index.php/Xcompmgr) | [picom](https://github.com/yshui/picom)
+    - [rofi](https://github.com/davatorium/rofi)
 - [Polybar](https://github.com/polybar/polybar)
     - fonts
         - [souce-code-pro](https://github.com/adobe-fonts/source-code-pro)
         - [tty-Font-Awesome4](https://aur.archlinux.org/packages/ttf-font-awesome-4/)
         - (optional)[Siji](https://github.com/stark/siji)
-- vim 
-    - + python3 
+- [vim](https://www.vim.otg)
+    - `+` python3 
     - [plug-vim](https://github.com/junegunn/vim-plug)
-- deepin-terminal
+- [deepin-terminal](https://github.com/linuxdeepin/deepin-terminal)
     - [deepin-snazzy](https://github.com/xxczaki/deepin-snazzy)
-    - zsh && [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+    - [zsh](www.zsh.org) && [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
         - plug: [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ## How To Use
