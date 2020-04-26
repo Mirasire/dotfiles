@@ -25,7 +25,7 @@ Termianl: deepin-terminal
         - [tty-Font-Awesome4](https://aur.archlinux.org/packages/ttf-font-awesome-4/)
         - (optional)[Siji](https://github.com/stark/siji)
 - vim 
-    - +python3 
+    - + python3 
     - [plug-vim](https://github.com/junegunn/vim-plug)
 - deepin-terminal
     - [deepin-snazzy](https://github.com/xxczaki/deepin-snazzy)
@@ -34,10 +34,10 @@ Termianl: deepin-terminal
 
 ## How To Use
 
+> `i3` need to `cp i3-wm/myScript /usr/bin`
+
 Instead the default config file by the files in this repository.
 
 `i3` and `polybar`'s config file is in the `~/config/i3/config` and `~/config/polybar/config`.
 `
 
-> `i3` need to put scripts in the `i3-wm/myScript` into `/bin/usr/`
-> backupdf script do a Backup for all config files
