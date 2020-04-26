@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+feh --bg-fill ~/Picture/desktop1.png
+
+xtodool key ctrl+shift+r

@@ -1,0 +1,210 @@
+;==========================================================;
+;                                                          ;
+;               Mirasire's Polybatr config                 ;
+;                                                          ;
+;==========================================================;
+
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #cc222
+background-alt = #cc444
+;foreground = ${xrdb:color7:#222}
+foreground = #ccdfdfdf
+foreground-alt = #cc555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+
+;========================top bar===========================
+[bar/topbar]
+
+width = 100%
+heigh = 27
+
+;set bar border
+border-size = 4
+border-color = #00000000
+padding-left = 0
+padding-right = 2
+
+;set underline size
+line-size = 2
+
+;for i3
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+;font
+font-0 = Source Code Pro:pixelsize=12;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = Wuncon siji:pixelsize=8;1
+font-3 = FontAwesome:pixelsize=10;1
+
+;back-ground
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;use modules && set marjin for module
+module-margin-left = 1
+module-margin-right = 2
+
+;other already doned modules: powermenu memory cpu 
+modules-left = i3 
+modules-center = xwindow
+modules-right = eth date alsa filesystem 
+
+
+;=============xwindow================
+[module/xwindow]
+type = internal/xwindow
+
+format-padding = 4
+
+label = %title:0:15:...%
+
+;======== date =======
+[module/date]
+type = internal/date
+interval = 1
+
+date = %m-%d
+date-alt = %m-%d-%Y
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = "   "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-font = 3
+
+label = %time% %date% 
+
+;===== i3 =====
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+;enable-click = true(default)|false
+enable-scroll = false 
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary} 
+;#3399cc
+label-focused-padding = 3
+
+; unfocused = inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+label-separator = |
+
+;====================alsa========================
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = " "
+label-volume-foreground = ${root.foreground}
+label-volume-font = 3
+
+format-muted-prefix = " "
+format-muted-foreground = #ffffff
+format-muted-font = 3
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #ffffff 
+bar-volume-foreground-1 = #ffffff
+bar-volume-foreground-2 = #ffffff
+bar-volume-foreground-3 = #ffffff
+bar-volume-foreground-4 = #ffffff
+bar-volume-foreground-5 = #ffffff
+bar-volume-foreground-6 = #ffffff
+bar-volume-gradient = false
+bar-volume-indicator = ▌
+bar-volume-indicator-font = 3
+bar-volume-fill = ─
+bar-volume-fill-font = 7
+bar-volume-fill-foreground = #ffffff 
+bar-volume-empty = ─
+bar-volume-empty-font = 5
+bar-volume-empty-foreground = #ffffff 
+
+;===============cpu info=============
+[module/cpu]
+type = internal/cpu
+interval = 1
+;format-prefix = " "
+format-prefix = CPU:
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage:2%%
+
+;==============memory info==============
+[module/memory]
+type = internal/memory
+interval = 5
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage_used%%
+
+;=================poermenu==============
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 2
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close = 
+label-close-foreground = #ffffff
+label-separator = | 
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = 
+menu-0-exec = sudo reboot
+menu-0-1 = 
+menu-0-1-exec = sudo poweroff
+
+;==============net work===============
+[module/eth]
+type = internal/network
+interface = ens33
+interval = 3.0
+
+format-connected-underline = #55aa55
+format-connected-prefix = "   "
+format-connected-prefix-font = 3
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+;==============file System===============
+[module/filesystem]
+type = internal/fs
+interval = 67
+mount-0 = /
+label-mounted =  : %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
