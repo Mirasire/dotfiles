@@ -14,7 +14,7 @@ OS: Arch Linux
 
 Shell: zsh
 
-Termianl: deepin-terminal
+Termianl: alacritty
 
 ### Dependencies
 
@@ -30,8 +30,7 @@ Termianl: deepin-terminal
 - [vim](https://www.vim.otg)
     - `+` python3 
     - [plug-vim](https://github.com/junegunn/vim-plug)
-- [deepin-terminal](https://github.com/linuxdeepin/deepin-terminal)
-    - [deepin-snazzy](https://github.com/xxczaki/deepin-snazzy)
+- [alacritty](https://github.com/alacritty/alacritty)
     - [zsh](www.zsh.org) && [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
         - plug: [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
@@ -41,6 +40,6 @@ Termianl: deepin-terminal
 
 Instead the default config file by the files in this repository.
 
-`i3` and `polybar`'s config file is in the `~/config/i3/config` and `~/config/polybar/config`.
+`i3` and `polybar`'s config file are in the `~/config/i3/config` and `~/config/polybar/config`.
 `
 

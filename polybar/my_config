@@ -50,10 +50,10 @@ foreground = ${colors.foreground}
 module-margin-left = 1
 module-margin-right = 2
 
-;other already doned modules: powermenu memory cpu 
+;other already doned modules: powermenu memory 
 modules-left = i3 
 modules-center = xwindow
-modules-right = eth date alsa filesystem 
+modules-right = eth cpu  date alsa filesystem 
 
 
 ;=============xwindow================

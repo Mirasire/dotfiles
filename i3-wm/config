@@ -45,8 +45,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec deepin-terminal
-# alacritty
+#bindsym $mod+Return exec deepin-terminal
+bindsym $mod+Return exec alacritty
 # (default)i3-sensible-terminal
 
 # kill focused window
@@ -184,7 +184,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #service or other Config
-exec_always --no-startup-id xcompmgr
+#exec_always --no-startup-id xcompmgr
+exec_always --no-startup-id picom --vsync -cC -D 0 
 exec_always --no-startup-id setbar
 
 
