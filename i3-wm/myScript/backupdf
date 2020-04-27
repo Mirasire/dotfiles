@@ -8,7 +8,7 @@ Loca="$HOME/Repo/remote/dotfiles"
 cp ${cfLoca}/polybar/my_config ${Loca}/polybar/
 
 #backup i3-wm
-cp ~/.myScript/* ${Loca}/i3-wm/myScript/
+cp -r ~/.myScript/* ${Loca}/i3-wm/myScript/
 cp ${cfLoca}/i3/config ${Loca}/i3-wm/
 
 #back alacritty

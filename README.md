@@ -34,6 +34,7 @@ Termianl: alacritty
     - [zsh](www.zsh.org) && [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
         - plug: [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
+
 ## How To Use
 
 > `i3` need to `cp i3-wm/myScript /usr/bin`
@@ -41,5 +42,19 @@ Termianl: alacritty
 Instead the default config file by the files in this repository.
 
 `i3` and `polybar`'s config file are in the `~/config/i3/config` and `~/config/polybar/config`.
-`
 
+## More things
+
+### about my polybar feature
+
+1. The modlue named `eth` in my polybar config files shows your network status.
+    - `green` means all right.
+    - `red` means you can't connet to the net.
+
+![netok](Preview/netok.png)
+
+![netbad](Preview/netbad.png)
+
+### plan
+
+[] make a class schedule reminder on polybar
