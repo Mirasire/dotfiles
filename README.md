@@ -47,9 +47,9 @@ Instead the default config file by the files in this repository.
 
 ### about my polybar feature
 
-1. The modlue named `eth` in my polybar config files shows your network status.
+1. The module named `eth` shows your network status.
     - `green` means all right.
-    - `red` means you can't connet to the net.
+    - `red` means it can't connet to the net.
 
 ![netok](Preview/netok.png)
 
@@ -57,4 +57,4 @@ Instead the default config file by the files in this repository.
 
 ### plan
 
-[] make a class schedule reminder on polybar
+[ ] make a class schedule reminder for polybar
