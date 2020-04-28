@@ -1,7 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/python
 # A class scedule reminder displayed at polybar
 
-nowLoca=$HOME/.myScript
-
 #print all
-head -1 $nowLoca/files/testfl
+#head -1 $nowLoca/files/testfl
+#"TODO: TKK schedule Reminder"
+
+print("hello")

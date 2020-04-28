@@ -52,8 +52,8 @@ module-margin-right = 2
 
 ;other already doned modules: powermenu memory xwindow
 ;todo list: sceduleReminder
-modules-left = i3 
-modules-center = sceduleReminder
+modules-left = i3
+modules-center = sceduleReminder xwindow
 modules-right = eth cpu date alsa filesystem 
 
 ;=============xwindow================
@@ -220,6 +220,6 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/sceduleReminder]
 type = custom/script
 interval = 1
-exec = source $HOME/.myScript/schReminder.todo
+exec = ./$HOME/.myScript/schReminder.todo
 ;exec = scedulereminder
 tail = true
