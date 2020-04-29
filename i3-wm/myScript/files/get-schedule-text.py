@@ -3,8 +3,6 @@
 
 #reglex
 import re
-#getTime
-import time
 #import BeautifulSoup
 from bs4 import BeautifulSoup
 
@@ -16,14 +14,6 @@ def sigleOrDoubel(str0):
         num=0
     return num
 
-#return week,hour,minutes
-def getTime():
-    #get now date
-    now_time=time.localtime()
-    now_wk=now_time.tm_wday
-    now_hour=now_time.tm_hour
-    now_min=now_time.tm_min
-    return [now_wk,now_hour,now_min]
 
 if __name__ == "__main__":
     #dealwith the printf
@@ -39,11 +29,19 @@ if __name__ == "__main__":
             info=td.contents;
             if num==0:
                 timeinfo=info[2].split('-')
+                if tr['class'][0]=='odd':
+                    for i in range(1,8):
+                        if len(class_list[i])!=0 and class_list[i][-1][0]==1:
+                            class_list[i][-1][0]=0
+                            class_list[i][-1][1][1]=timeinfo[1]
             elif len(info)==7:
                 #0=1-16, 1=single(1-16), 2=double(1-16)
-                class_list[num].append([timeinfo,info[0],info[4],re.match(r'[0-9]-[0-9][0-9]',info[6]).group(),sigleOrDoubel(info[6])])
+                #[flag,time_info,class_name,class_location,week_range,SigleorDouble]
+                class_list[num].append([1,timeinfo,info[0][0:info[0].find('(',1)],info[4],re.match(r'[0-9]-[0-9][0-9]',info[6]).group(),sigleOrDoubel(info[6])])
             num+=1
+    print("class_info=[",end='')
     for i in class_list:
         if len(i)>=1:
-            print(i)
-    print(getTime())
+            print(i,('' if(i==class_list[5]) else ','),end='')
+        num+=1
+    print("]")

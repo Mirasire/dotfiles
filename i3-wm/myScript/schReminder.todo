@@ -1,8 +1,12 @@
 #!/usr/bin/python
 # A class scedule reminder displayed at polybar
 
-#print all
-#head -1 $nowLoca/files/testfl
-#"TODO: TKK schedule Reminder"
+#DONE: Basic TKK schedule Reminder
+#TODO: 1.make the difference on single week and double week
+#      2.class week range supported 
 
-print("hello")
+import os
+
+if __name__ == "__main__":
+    LOCAL="/home/mirasire/.myScript/files"
+    os.system('python {}/schedule-reminder.py'.format(LOCAL))

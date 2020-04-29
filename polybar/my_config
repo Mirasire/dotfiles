@@ -14,6 +14,7 @@ foreground = #ccdfdfdf
 foreground-alt = #cc555
 primary = #ffb52a
 secondary = #e60053
+third = #0099ff
 alert = #bd2c40
 
 
@@ -24,7 +25,7 @@ width = 100%
 heigh = 27
 
 ;set bar border
-border-size = 4
+border-size = 6
 border-color = #00000000
 padding-left = 0
 padding-right = 2
@@ -37,10 +38,10 @@ line-size = 2
 ;scroll-down = i3wm-wsprev
 
 ;font
-font-0 = Source Code Pro:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Wuncon siji:pixelsize=8;1
-font-3 = FontAwesome:pixelsize=10;1
+font-0 = Source Code Pro:pixelsize=12;0
+font-1 = unifont:fontformat=truetype:size=11:antialias=false;0
+font-2 = Wuncon siji:pixelsize=8;0
+font-3 = FontAwesome:pixelsize=10;0
 
 ;back-ground
 background = ${colors.background}
@@ -50,9 +51,9 @@ foreground = ${colors.foreground}
 module-margin-left = 1
 module-margin-right = 2
 
-;other already doned modules: powermenu memory xwindow
+;other already doned modules: powermenu memory
 ;todo list: sceduleReminder
-modules-left = i3
+modules-left =  i3 
 modules-center = sceduleReminder xwindow
 modules-right = eth cpu date alsa filesystem 
 
@@ -219,7 +220,8 @@ label-unmounted-foreground = ${colors.foreground-alt}
 ;TODO
 [module/sceduleReminder]
 type = custom/script
-interval = 1
-exec = ./$HOME/.myScript/schReminder.todo
-;exec = scedulereminder
 tail = true
+interval = 1
+exec=$HOME/.myScript/schReminder.todo
+label-underline = ${colors.secondary}
+#label-underline = ${colors.third}

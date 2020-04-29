@@ -23,6 +23,10 @@ Termianl: alacritty
     - [xcompmgr](https://wiki.archlinux.org/index.php/Xcompmgr) | [picom](https://github.com/yshui/picom)
     - [rofi](https://github.com/davatorium/rofi)
 - [Polybar](https://github.com/polybar/polybar)
+    - python>=3.2
+        - BeautifulSoup4
+        - lxml
+        - html5lib
     - fonts
         - [souce-code-pro](https://github.com/adobe-fonts/source-code-pro)
         - [tty-Font-Awesome4](https://aur.archlinux.org/packages/ttf-font-awesome-4/)
@@ -42,6 +46,8 @@ Termianl: alacritty
 Instead the default config file by the files in this repository.
 
 `i3` and `polybar`'s config file are in the `~/config/i3/config` and `~/config/polybar/config`.
+
+Replace `module/eth`'s `interface` in `polybar` configuration with your network interface.
 
 ## More things
 
