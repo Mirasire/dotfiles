@@ -22,7 +22,7 @@ def formateClassInfo(status,diff_time,cs,nxt_cs=[]):
     class1="{name}  {location}".format(name=nxt_cs[2],location=nxt_cs[3]) if len(nxt_cs) != 0 else ''
     message=""
     if status==1:
-        message="  剩余 {} 分钟".format(diff_time)
+        message="  {} 分钟后下课".format(diff_time)
         message="{} | 下节课: {} <{}>".format(message,class1,nxt_cs[1][0]) if nxt_cs!=[] else "{} |  ".format(message)
     else:
         message="{}  剩余 {} 分钟".format(class0,diff_time)
@@ -37,12 +37,14 @@ if __name__ == "__main__":
     foundClassInfo()
     from classinfo import class_info as plan
     #deal with
+    flag=0
     for i,cs in enumerate(plan[tm_wk]):
         #if cs!=plan[tm_wk][-1]:
         nxt_cs=(plan[tm_wk][i+1] if cs!=plan[tm_wk][-1] else [])
         cs_btm=strToMin(cs[1][0])
         cs_etm=strToMin(cs[1][1])
         if tm_hw <= cs_btm or tm_hw < cs_etm:
+            flag=1
             tm_diff = -(tm_hw - (cs_btm if tm_hw <= cs_btm else cs_etm))
             if tm_hw < cs_btm and tm_diff<=20:
                 print(formateClassInfo(0,tm_diff,cs))
@@ -53,3 +55,4 @@ if __name__ == "__main__":
             else:
                 print('  ')
             break
+    print('') if flag==0 else print('',end='')

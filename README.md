@@ -41,13 +41,18 @@ Termianl: alacritty
 
 ## How To Use
 
-> `i3` need to `cp i3-wm/myScript /usr/bin`
-
 Instead the default config file by the files in this repository.
+
+**i3-wm and polybar**
+
+> `i3` need to `cp i3-wm/myScript $HOME/.myScript`
+>  and move the `setbar`,`setbg` to the `/usr/bin/`
 
 `i3` and `polybar`'s config file are in the `~/config/i3/config` and `~/config/polybar/config`.
 
 Replace `module/eth`'s `interface` in `polybar` configuration with your network interface.
+
+download you `class.html` in [jw.xujc.com](http://jw.xujc.com) and move it to the $HOME/.myScript/files/schedule.html
 
 ## More things
 
@@ -58,3 +63,11 @@ Replace `module/eth`'s `interface` in `polybar` configuration with your network 
     - ![netok](Preview/netok.png)
     - `red` means it can't connet to the net.
     - ![netbad](Preview/netbad.png)
+2. TKK(Xiamen University Tan Kan Kee College) Class Reminder
+    - Reminder when and where to attend next class before 20 minutes.
+    - Support the schedule witch exported from the [jw.xujc.com](http://jw.xujc.com)
+    - ![sta3](Preview/sta4.png)
+    - ![sta1](Preview/sta1.png)
+    - ![sta2](Preview/sta2.png)
+    - ![sta4](Preview/sta5.png)
+    - TODO: support `week range of class` and `odd and even week`.

@@ -40,6 +40,8 @@ inoremap { {}<esc>i
 inoremap ( ()<esc>i
 inoremap [ []<esc>i
 
+"include Emacs pnbf
+
 "============== vim-plug ================
 
 " Specify a directory for plugins
