@@ -66,8 +66,8 @@ download you `class.html` in [jw.xujc.com](http://jw.xujc.com) and move it to th
 2. TKK(Xiamen University Tan Kan Kee College) Class Reminder
     - Reminder when and where to attend next class before 20 minutes.
     - Support the schedule witch exported from the [jw.xujc.com](http://jw.xujc.com)
-    - ![sta3](Preview/sta4.png)
+    - ![sta3](Preview/sta3.png)
     - ![sta1](Preview/sta1.png)
     - ![sta2](Preview/sta2.png)
-    - ![sta4](Preview/sta5.png)
+    - ![sta4](Preview/sta4.png)
     - TODO: support `week range of class` and `odd and even week`.
