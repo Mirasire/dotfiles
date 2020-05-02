@@ -187,6 +187,7 @@ bindsym $mod+r mode "resize"
 #exec_always --no-startup-id xcompmgr
 exec_always --no-startup-id picom --vsync -cC -D 0 
 exec_always --no-startup-id setbar
+exec_always fcitx
 
 
 #set border

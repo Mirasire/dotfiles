@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dmax
+# key: dmax
+# --
+const int maxn = ${0:1e5+100};

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: codeinit
+# key: codeinit
+# --
+#include <bits/stdc++.h>
+
+$1
+int main(){
+    std::ios::sync_with_stdio(false);
+    return 0;
+}

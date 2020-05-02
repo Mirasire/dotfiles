@@ -32,6 +32,8 @@ def formateClassInfo(status,diff_time,cs,nxt_cs=[]):
 if __name__ == "__main__":
     tm_info=getTime()
     tm_wk=tm_info[0]
+    if tm_wk>=5:
+        sys.exit(0)
     tm_hw=toMin(tm_info[1],tm_info[2])
     #init
     foundClassInfo()
@@ -51,7 +53,7 @@ if __name__ == "__main__":
             elif tm_diff <= 20 and tm_diff>0:
                 print(formateClassInfo(1,tm_diff,cs,nxt_cs))
             elif tm_hw>=cs_btm:
-                print('Pleace Foucing on Class  ')
+                print('请专注于课堂  ')
             else:
                 print('  ')
             break

@@ -41,6 +41,10 @@ inoremap ( ()<esc>i
 inoremap [ []<esc>i
 
 "include Emacs pnbf
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
 
 "============== vim-plug ================
 
@@ -65,6 +69,7 @@ Plug 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
+Plug 'vim-scripts/fcitx.vim'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
