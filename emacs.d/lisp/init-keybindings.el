@@ -13,5 +13,6 @@
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 (global-set-key (kbd "C-h l") 'counsel-find-library)
+;;(global-set-key (kbd "SPC j l") 'avy-goto-char)
 
 (provide 'init-keybindings)

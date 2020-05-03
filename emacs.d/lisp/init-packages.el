@@ -29,6 +29,7 @@
                       counsel
                       smartparens
                       popwin
+                      avy
                       ;; --- Major Mode ---
                       markdown-mode
                       web-mode
@@ -58,6 +59,11 @@
 
 ;; setting for my Emacs
 (global-evil-leader-mode)
+(evil-leader/set-leader "SPC")
+(evil-leader/set-key
+  "jl" 'avy-goto-line
+  "jw" 'avy-goto-char-2)
+
 (require 'popwin)
 (popwin-mode t)
 (require 'evil)
