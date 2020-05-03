@@ -35,7 +35,7 @@ set nobackup
 
 "==============I/N/V Setting=============
 
-inoremap jj <esc>
+inoremap jk <esc>
 inoremap { {}<esc>i
 inoremap ( ()<esc>i
 inoremap [ []<esc>i
