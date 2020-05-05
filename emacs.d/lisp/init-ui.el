@@ -8,6 +8,5 @@
 (global-linum-mode 1)
 ;;Config for linum relative (idear from vim set run)
 ;;(require 'linum-relative)
-;;(linum-relative-global-mode 1)
 
 (provide 'init-ui)

@@ -3,8 +3,10 @@
 # key: codeinit
 # --
 #include <bits/stdc++.h>
+using namespace std;
 
-$1
+${1://https://github/Mirasire}
+
 int main(){
     std::ios::sync_with_stdio(false);
     return 0;

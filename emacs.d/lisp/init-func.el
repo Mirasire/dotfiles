@@ -10,4 +10,8 @@
   (save-excursion
     (indent-region (point-min) (point-max) nil)))
 
+(defun mirasire-ansi-term ()
+  (interactive)
+  (ansi-term "/bin/zsh"))
+
 (provide 'init-func)

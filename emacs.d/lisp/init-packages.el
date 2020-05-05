@@ -1,5 +1,5 @@
-;; Added by Package.el.  This must come before configurations of
 ;; Installed packages.  Don't delete this line.  If you don't want it,
+;; Added by Package.el.  This must come before configurations of
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (when (>= emacs-major-version 24)
@@ -20,9 +20,6 @@
                       company
                       ;; --- Better Editor ---
                       hungry-delete
-                      evil
-                      evil-leader
-                      evil-escape
                       yasnippet
                       yasnippet-snippets
                       swiper
@@ -30,17 +27,28 @@
                       smartparens
                       popwin
                       avy
+                      expand-region
+                      ;; --- shell | terminal ---
+                      shell-pop
+                      multi-term
                       ;; --- Major Mode ---
                       markdown-mode
                       web-mode
+                      ;;--- try copy form vim ---
+                      evil
+                      evil-leader
+                      evil-escape
+                      neotree
                       ;; --- Minor Mode ---
                       ;;		nodejs-repl
                       ;;		exec-path-from-shell
                       ;; --- Themes ---
                       solarized-theme
-                      gruvbox-theme
                       helm-themes
+                      doom-themes
                       zenburn-theme
+                      all-the-icons
+                      all-the-icons-dired
                       ) "Default packages")
 
 (setq package-selected-packages mirasire/packages)
@@ -57,13 +65,21 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+
+(require 'neotree)
 ;; setting for my Emacs
 (global-evil-leader-mode)
 (evil-leader/set-leader "SPC")
 (evil-leader/set-key
   "jl" 'avy-goto-line
-  "jw" 'avy-goto-char-2)
+  "jw" 'avy-goto-char-2
+  "te" 'mirasire-ansi-term
+  "tt" 'neotree-toggle
+  "sb" 'counsel-switch-buffer)
 
+(require 'multi-term)
+(setq multi-term-program "/bin/zsh")
+(require 'expand-region)
 (require 'popwin)
 (popwin-mode t)
 (require 'evil)
@@ -76,13 +92,8 @@
 (global-company-mode 1)
 (global-hungry-delete-mode 1)
 (add-hook 'c-mode-common-hook 'evil-local-mode)
-;;(load-theme 'solarized-dark 1)
-(load-theme 'gruvbox 1)
-
-;;config for swiper
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
+;;(linum-relative-global-mode 1)
+(load-theme 'solarized-dark 1)
 
 
 ;;Config for smartparens
