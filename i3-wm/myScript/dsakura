@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+docsify serve ~/Repo/remote/mirasire/all-in-one/notebook/Sakura 

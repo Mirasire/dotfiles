@@ -16,40 +16,48 @@
 
 ;; Add Packages
 (defvar mirasire/packages '(
-                      ;; --- Auto-completion ---
-                      company
-                      ;; --- Better Editor ---
-                      hungry-delete
-                      yasnippet
-                      yasnippet-snippets
-                      swiper
-                      counsel
-                      smartparens
-                      popwin
-                      avy
-                      expand-region
-                      ;; --- shell | terminal ---
-                      shell-pop
-                      multi-term
-                      ;; --- Major Mode ---
-                      markdown-mode
-                      web-mode
-                      ;;--- try copy form vim ---
-                      evil
-                      evil-leader
-                      evil-escape
-                      neotree
-                      ;; --- Minor Mode ---
-                      ;;		nodejs-repl
-                      ;;		exec-path-from-shell
-                      ;; --- Themes ---
-                      solarized-theme
-                      helm-themes
-                      doom-themes
-                      zenburn-theme
-                      all-the-icons
-                      all-the-icons-dired
-                      ) "Default packages")
+                            ;; --- Auto-completion ---
+                            company
+                            ;; --- Better Editor ---
+                            org-pomodoro
+                            keyfreq
+                            hungry-delete
+                            yasnippet
+                            yasnippet-snippets
+                            swiper
+                            counsel
+                            smex
+                            smartparens
+                            popwin
+                            avy
+                            ivy
+                            ace-pinyin
+                            expand-region
+                            window-numbering
+                            ;; --- shell | terminal ---
+                            w3m
+                            erc
+                            exec-path-from-shell
+                            ;; --- Major Mode ---
+                            markdown-mode
+                            web-mode
+                            ;; --- Minor Mode ---
+                            polymode
+                            poly-markdown
+                            poly-org
+                            ;;--- try copy form vim ---
+                            evil
+                            evil-leader
+                            evil-escape
+                            neotree
+                            ;;--- org mode ---
+                            org-bullets
+                            toc-org
+                            ;;--- Themes ---
+                            emojify
+                            gruvbox-theme
+                            rainbow-delimiters
+                            ) "Default packages")
 
 (setq package-selected-packages mirasire/packages)
 
@@ -66,49 +74,32 @@
       (package-install pkg))))
 
 
+
+;;(add-hook 'after-init-hook #'global-emojify-mode)
 (require 'neotree)
 ;; setting for my Emacs
-(global-evil-leader-mode)
-(evil-leader/set-leader "SPC")
-(evil-leader/set-key
-  "jl" 'avy-goto-line
-  "jw" 'avy-goto-char-2
-  "te" 'mirasire-ansi-term
-  "tt" 'neotree-toggle
-  "sb" 'counsel-switch-buffer)
-
-(require 'multi-term)
-(setq multi-term-program "/bin/zsh")
+(window-numbering-mode t)
 (require 'expand-region)
+
 (require 'popwin)
 (popwin-mode t)
-(require 'evil)
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 14)
-(setq-default evil-escape-key-sequence "jk")
-(setq-default evil-escape-delay 0.2)
-(add-hook 'evil-local-mode-hook 'evil-escape-mode)
-(global-company-mode 1)
-(global-hungry-delete-mode 1)
-(add-hook 'c-mode-common-hook 'evil-local-mode)
-;;(linum-relative-global-mode 1)
-(load-theme 'solarized-dark 1)
 
+(global-hungry-delete-mode 1)
 
 ;;Config for smartparens
 (require 'smartparens-config)
 (smartparens-global-mode t)
 
-;;Config for markdown mode
-(setq markdown-command "pandoc")
+(require 'ace-pinyin)
+(ace-pinyin-mode t)
 
 ;;config for yas-snippets
 (setq yas-snippet-dirs
       '("~/.emacs.d/snippets"                 ;; personal snippets
         "~/.emacs.d/snippets/icpc"                 ;; personal icpc/ccpc tmplate snippets
-        ;;"/path/to/some/collection/"           ;; foo-mode and bar-mode snippet collection
-        ;;"/path/to/yasnippet/yasmate/snippets" ;; the yasmate collection
         ))
 (yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
 

@@ -46,7 +46,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec deepin-terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec xfce4-terminal --hide-menubar
+#bindsym $mod+Return exec alacritty
 # (default)i3-sensible-terminal
 
 # kill focused window

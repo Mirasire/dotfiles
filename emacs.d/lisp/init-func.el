@@ -4,6 +4,11 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(defun mirasrie-open-gtd()
+  (interactive)
+  (dired "~/GTD"))
+
+
 (defun indent-all-code()
   "indent all lines"
   (interactive)

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mirasire/.oh-my-zsh"
@@ -108,4 +108,8 @@ alias coderepo="cd $HOME/Repo/remote"
 alias github="cd $HOME/Repo/remote/github"
 alias mirasire="cd $HOME/Repo/remote/mirasire"
 alias icpccode="cd $HOME/Repo/remote/mirasire/icpc-train"
+alias cfcode="cd $HOME/Repo/local/Codeforces"
+alias sakura="cd $HOME/Repo/remote/mirasire/all-in-one/notebook/Sakura"
+alias sushi="cd $HOME/Repo/remote/mirasire/all-in-one/notebook/Sushi"
+#alias emacs="emacs -nw"
 

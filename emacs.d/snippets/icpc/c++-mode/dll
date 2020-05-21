@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dll
+# key: dll
+# --
+typedef long long int ll;

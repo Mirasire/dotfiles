@@ -1,4 +1,5 @@
 #!/bin/zsh
+#
 # backup configure file
 
 cfLoca="$HOME/.config"
