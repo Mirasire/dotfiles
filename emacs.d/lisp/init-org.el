@@ -56,7 +56,7 @@
  (setq org-capture-templates
       '( 
         ("i" "收集箱 - 捕获需要的资料" checkitem (file+headline "~/GTD/capture/inbox.org" "收集箱 -- @Inbox")
-	 "- [ ] %?\n"
+	 "- [ ] %?\n %u"
          :empty-lines 1)
         ("r" "参考资料" entry (file+headline "~/GTD/capture/refrence.org" "参考资料 -- @Refrence")
 	 "* %i %?\n"

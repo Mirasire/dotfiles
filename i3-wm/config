@@ -46,6 +46,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec deepin-terminal
+#bindsym $mod+Return exec xfce4-terminal --hide-menubar
 bindsym $mod+Return exec xfce4-terminal --hide-menubar
 #bindsym $mod+Return exec alacritty
 # (default)i3-sensible-terminal
@@ -189,6 +190,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id picom --vsync -cC -D 0 
 exec_always --no-startup-id setbar
 exec_always fcitx
+exec tilda
 
 
 #set border

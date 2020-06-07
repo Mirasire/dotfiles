@@ -51,10 +51,10 @@ foreground = ${colors.foreground}
 module-margin-left = 1
 module-margin-right = 2
 
-;other already doned modules: powermenu memory
+;other already doned modules: powermenu memory sceduleReminder 
 ;todo list: sceduleReminder
 modules-left =  i3 
-modules-center = sceduleReminder xwindow
+modules-center = xwindow
 modules-right = eth cpu date alsa filesystem 
 
 ;=============xwindow================

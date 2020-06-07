@@ -36,7 +36,7 @@
  '(org-agenda-files (quote ("~/GTD" "~/GTD/capture")))
  '(package-selected-packages
    (quote
-    (counsel-etags company keyfreq hungry-delete yasnippet yasnippet-snippets swiper smex smartparens popwin avy ivy expand-region window-numbering w3m exec-path-from-shell markdown-mode web-mode polymode poly-markdown poly-org evil evil-leader evil-escape neotree gruvbox-theme rainbow-delimiters)))
+    (htmlize counsel-etags company keyfreq hungry-delete yasnippet yasnippet-snippets swiper smex smartparens popwin avy ivy expand-region window-numbering w3m exec-path-from-shell markdown-mode web-mode polymode poly-markdown poly-org evil evil-leader evil-escape neotree gruvbox-theme rainbow-delimiters)))
  '(pdf-view-midnight-colors (cons "#839496" "#002b36"))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")

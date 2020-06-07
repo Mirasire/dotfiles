@@ -5,6 +5,7 @@
 (setq-default evil-escape-delay 0.2)
 (evil-leader/set-leader "SPC")
 (evil-leader/set-key
+  "oo" 'org-open-at-point
   "ot" 'org-todo
   "oi" 'org-todo
   "oa" 'org-agenda
