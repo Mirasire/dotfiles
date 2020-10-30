@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ncode 
+# key: ncode
+# --
+
+\`\`\`${0:c}
+\`\`\`

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: noteinit
+# key: noteinit
+# --
+
+#+title: $1
+#+date:
+#+author: Mirasire
+#+email: mes2dasuan@outlook.com
+#+github: http://github.com/Mirasire
+#+language: zh_CN
+#+select_tags:
+#+exclude_tags:
+#+creator: Emacs
+

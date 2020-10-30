@@ -18,7 +18,13 @@
 (defvar mirasire/packages '(
                             ;; --- Auto-completion ---
                             company
+                            lsp-mode
+                            anaconda-mode
+                            company-anaconda
+                            ;; --- python IDE ---
+                            ;; elpy
                             ;; --- Better Editor ---
+                            cnfonts
                             org-pomodoro
                             keyfreq
                             hungry-delete
@@ -34,6 +40,7 @@
                             ace-pinyin
                             expand-region
                             window-numbering
+                            which-key
                             ;; --- shell | terminal ---
                             w3m
                             erc

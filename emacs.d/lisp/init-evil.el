@@ -13,6 +13,9 @@
   "oc" 'org-capture
   "os" 'org-schedule
   "od" 'org-deadline
+  "om" 'org-meta-return
+  "o'" 'org-edit-special
+  "da" 'org-date-from-calendar
   "ff" 'counsel-find-file
   "fr" 'recentf-open-files
   "fs" 'save-buffer
@@ -33,7 +36,7 @@
   "2"  'select-window-2
   "3"  'select-window-3
   "4"  'select-window-4
-  "<tab>" 'counsel-switch-buffer)
+  "TAB" 'counsel-switch-buffer)
 
 
 (add-hook 'evil-loval-mode 'evil-escape-mode)
@@ -49,5 +52,15 @@
   (define-key evil-normal-state-map (kbd "C-a") 'move-beginning-of-line)
   (define-key evil-normal-state-map (kbd "/") 'swiper)
   (define-key evil-normal-state-map (kbd "C-e") 'move-end-of-line))
+
+;;emacs terminal let tab be <tab>
+(evil-define-key 'motion org-mode-map (kbd "TAB")
+  '(menu-item "org-cycle-maybe" nil
+              :filter (lambda (&optional _)
+                        (when (and (not (display-graphic-p))
+                                   (or (org-at-heading-or-item-p)
+                                       (org-at-table-p)
+                                       (org-at-block-p)))
+                          #'org-cycle))))
 
 (provide 'init-evil)
