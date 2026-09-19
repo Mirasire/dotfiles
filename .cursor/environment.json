@@ -1,0 +1,4 @@
+{
+  "name": "mirasire-dotfiles",
+  "install": "sudo apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends python3-bs4 python3-lxml python3-html5lib python-is-python3"
+}
